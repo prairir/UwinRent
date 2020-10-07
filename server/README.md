@@ -16,17 +16,22 @@
 ### Setup
 
 1. cd into <MAIN>/server
+   
    run `cd ./server`
 
 * Create venv(optional but reccomeneded for dev)
-  * create <MAIN>/server/venv
+  * create `<MAIN>/server/venv`
+   
     run `mkdir ./venv`
  
   * create venv 
+  
     run `python3 -m venv ./venv/`
  
   * activate venv 
+    
     run `source ./venv/bin/activate` 
    
 2. Install the dependencies
+
    run `pip3 -r requirements.txt`
