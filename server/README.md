@@ -34,4 +34,4 @@
    
 2. Install the dependencies
 
-   run `pip3 -r requirements.txt`
+   run `pip3 install -r requirements.txt`
