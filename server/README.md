@@ -6,6 +6,9 @@
 * Ariadne - Graphql
 * Flask - Web Server
 
+## structure overview
+
+
 ## How to run
 
 ### Requirements
@@ -15,11 +18,12 @@
 
 ### Setup
 
-1. cd into <MAIN>/server
+1. cd into `<MAIN>/server`
    
    run `cd ./server`
 
 * Create venv(optional but reccomeneded for dev)
+
   * create `<MAIN>/server/venv`
    
     run `mkdir ./venv`

@@ -3,11 +3,11 @@ from ariadne import graphql_sync, make_executable_schema, gql, load_schema_from_
 # graphql playground
 from ariadne.constants import PLAYGROUND_HTML
 
-from graph import queries
-from graph.queries import query, hi
+# resolvers
+from graph.resolvers import resolvers
 
 type_def = gql(load_schema_from_path("graph/schema/"))
-SCHEMA = make_executable_schema(type_def, [query, hi])
+SCHEMA = make_executable_schema(type_def, resolvers)
 
 app = Flask(__name__)
 
