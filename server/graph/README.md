@@ -1,5 +1,5 @@
 # GraphQL Structure
-We are using GraphQL to grab specific data from our database. The database will be filled with renter information as well as the properties to coincide with each landlord.
+We are using GraphQL to grab specific data from our database. The database will be filled with landlord information as well as the properties to coincide with each landlord.
 
 Learn more about GraphQL here: https://graphql.org/
 
