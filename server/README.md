@@ -1,6 +1,6 @@
 # UWin Rent Server
 
-**The instructions are for unix based OS's**
+*The instructions are for unix based OS's*
 
 ## Technologies overview
 * Ariadne - Graphql
@@ -39,3 +39,7 @@
 2. Install the dependencies
 
    run `pip3 install -r requirements.txt`
+
+3. Actually run the code
+   
+   run `python3 app.py`
