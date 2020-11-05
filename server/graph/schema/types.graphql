@@ -17,7 +17,7 @@ type Hi {
 type Property {
 	id: ID!
 	location: Location!
-        landlord: Landlord!
+	landlord: Landlord!
 	price: String!
 	description: String
 	petFriendly: Boolean!
