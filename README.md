@@ -1,9 +1,21 @@
 # UwinRent
 
 ## Requirements
+* <MAIN>/server Requirements
+* <MAIN>/client Requirements
+* Caddyserver2 
+
+## How to run - dev
+
+1. Follow <MAIN>/server startup steps
+
+2. Follow <MAIN>/client startup steps
+
+3. in `<MAIN>` run `sudo caddy start`
+   now at https://localhost:80 the app is running
 
 
-## Steps
+## Sequence diagram 
 
 steps that the server undertakes when getting a request from a browser
 
