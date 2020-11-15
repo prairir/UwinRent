@@ -1,3 +1,4 @@
+# Import the database object (db) from the main application module
 from database import db
 
 # Define a base model for other database tables to inherit
