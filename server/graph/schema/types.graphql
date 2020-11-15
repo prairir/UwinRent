@@ -1,6 +1,9 @@
 type Query {
      hello: Hi!
      time: Time!
+     properties: [Property!]!
+     renter: Renter!
+     landlord: Landlord!
 }
 
 type Time {
@@ -9,4 +12,35 @@ type Time {
 
 type Hi {
      word: String!
+}
+
+type Property {
+	id: ID!
+	location: Location!
+	landlord: Landlord!
+	price: String!
+	description: String
+	petFriendly: Boolean!
+	smokeFree: Boolean!
+	wholeHouse: Boolean!
+	rooms: Int
+	furnished: Boolean!
+	utilities: [String!]!
+}
+
+type Renter {
+	id: ID!
+	contact: Contact!
+}
+
+type Landlord {
+	id: ID!
+	property: [Property!]!
+	contact: Contact!
+}
+
+type Contact {
+	name: String!
+	email: String!
+	phoneNum: String
 }
