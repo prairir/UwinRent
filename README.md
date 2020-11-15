@@ -1,5 +1,10 @@
 # UwinRent
 
+## Requirements
+
+
+## Steps
+
 steps that the server undertakes when getting a request from a browser
 
 1. browser sends GET / to server

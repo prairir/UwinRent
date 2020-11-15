@@ -5,6 +5,7 @@
 ## Technologies overview
 * Ariadne - Graphql
 * Flask - Web Server
+* Gunicorn - Reverse Proxy Entry Point
 
 ## structure overview
 
@@ -15,6 +16,11 @@
 * python 3.8+
 * pyvenv
 * pip
+
+#### Update Requirements
+
+run `pip freeze > requirements.txt`
+
 
 ### Setup
 
@@ -42,4 +48,4 @@
 
 3. Actually run the code
    
-   run `python3 app.py`
+   run `gunicorn --bind 127.0.0.1:5000 wsgi:app`
