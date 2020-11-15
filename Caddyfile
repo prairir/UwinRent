@@ -1,0 +1,16 @@
+localhost
+
+# server reverse proxy
+# strips the prefix and sends to flask server
+# the prefix is /s
+# this is to distinguish stuff
+route /s/* {
+        uri strip_prefix /s
+        reverse_proxy localhost:5000
+}
+
+# client server reverse proxy
+# this is used for a file server
+route /* {
+      reverse_proxy localhost:3000
+}
