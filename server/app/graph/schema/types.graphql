@@ -44,3 +44,7 @@ type Contact {
 	email: String!
 	phoneNum: String
 }
+
+type Location {
+     address: String!
+}
