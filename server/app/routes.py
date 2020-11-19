@@ -1,15 +1,16 @@
-from flask import Flask, request, jsonify
+from app import app
+
+from flask import request, jsonify
+
 from ariadne import graphql_sync, make_executable_schema, gql, load_schema_from_path
 # graphql playground
 from ariadne.constants import PLAYGROUND_HTML
 
 # resolvers
-from graph.resolvers import resolvers
+from app.graph.resolvers import resolvers
 
-type_def = gql(load_schema_from_path("graph/schema/"))
+type_def = gql(load_schema_from_path("app/graph/schema/"))
 SCHEMA = make_executable_schema(type_def, resolvers)
-
-app = Flask(__name__)
 
 # get method means playground
 @app.route('/graphql', methods=['GET'])
@@ -36,6 +37,3 @@ def graphql_server():
 @app.route('/')
 def hi():
     return 'hi'
-
-if __name__ == '__main__':
-    app.run()

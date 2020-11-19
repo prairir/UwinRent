@@ -1,5 +1,5 @@
 import React from 'react';
-import { GQLProvider } from 'Providers';
+import { GQLProvider } from './Providers';
 
 const Provider = (props) => {
     return (
