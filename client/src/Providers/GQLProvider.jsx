@@ -1,9 +1,13 @@
 import React from 'react';
-import {  ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
+import {  ApolloProvider, ApolloClient, HttpLink, InMemoryCache } from '@apollo/client';
+
+const link = new HttpLink({
+  uri: 'https://localhost/s/graphql',
+})
 
 const client = new ApolloClient({
-  uri: 'http://127.0.0.1:5000/s/graphql',
-  cache: new InMemoryCache()
+  link,
+  cache: new InMemoryCache(),
 });
 
 const GQLProvider = (props) => {
