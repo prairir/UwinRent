@@ -1,4 +1,17 @@
-.leaflet-container {
-  width: 100%;
-  height: 100vh;
+.HomeContainer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
 }
+
+.Properties {
+    
+}
+
+.Map {
+    width: 40%; 
+    height: 40%; 
+}
+

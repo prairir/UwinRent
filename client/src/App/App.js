@@ -3,7 +3,8 @@ import { useQuery, gql } from '@apollo/client';
 
 import { BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom';
 
-import { HomePage } from './Scenes/HomePage'
+import './App.css'
+import { HomePage } from '../Scenes/HomePage'
 
 const querystuff = gql`
   query {

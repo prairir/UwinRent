@@ -1,15 +1,17 @@
 import React from 'react';
-import { MapContainer, TileLayer } from "react-leaflet";
+import { Map } from '../../Components/Map';
 import './HomePage.css'
 
 const HomePage = () => {
     return (
-        <MapContainer center={[42.306, -83.067]} zoom={15} scrollWheelZoom={true}>
-            <TileLayer
-                attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            />
-        </MapContainer>
+        <div className="HomeContainer">
+            <div className="Properties">
+                <p>things</p>
+            </div>
+            <div className="Map">
+                <Map/>
+            </div>
+        </div>
     );
 }
 
