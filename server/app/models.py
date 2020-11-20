@@ -13,10 +13,6 @@ class users(db.Model):
         self.name = name
         self.email = email
 
-    # Used for queries
-    def __repr__(self):
-        return '<User %r>' %self.name
-
 # Define a property model
 class properties(db.Model):
     id = db.Collumn(db.Integer, primary_key = True)
@@ -28,10 +24,6 @@ class properties(db.Model):
         self.landlord = landlord
         self.location = location
         self.price = price
-
-    # Used for queries
-    def __repr__(self):
-        return '<Property %r>' %self.id
 
 # Define a property description model
 class p_descriptions(db.Model):
@@ -52,7 +44,3 @@ class p_descriptions(db.Model):
         self.rooms = rooms
         self.furnished = furnished
         self.utilities = utilities
-
-    # Used for queries
-    def __repr__(self):
-        return '<Property Description %r>' %self.id
