@@ -1,10 +1,12 @@
 from app import app
 
 from flask import request, jsonify
+from flask_cors import cross_origin
 
 from ariadne import graphql_sync, make_executable_schema, gql, load_schema_from_path
-# graphql playground
 from ariadne.constants import PLAYGROUND_HTML
+
+
 
 # resolvers
 from app.graph.resolvers import resolvers
@@ -21,6 +23,7 @@ def graphql_playground():
 
 # post means interact with graphql server
 @app.route('/graphql', methods=['POST'])
+# @cross_origin(origin='*')
 def graphql_server():
     data = request.get_json()
 
@@ -36,4 +39,4 @@ def graphql_server():
 
 @app.route('/')
 def hi():
-    return 'hi'
+    return 'something'

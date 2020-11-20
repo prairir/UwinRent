@@ -1,0 +1,17 @@
+.HomeContainer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+.Properties {
+    
+}
+
+.Map {
+    width: 40%; 
+    height: 40%; 
+}
+
