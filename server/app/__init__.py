@@ -10,7 +10,9 @@ db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 cors = CORS(app, resources={r"/graphql": {"origins": "*"}})
 
-from app import routes
+import models
+import routes
 
 if __name__ == '__main__':
+    db.create_all()
     app.run()
