@@ -1,4 +1,4 @@
-from __init__ import db
+from app import db
 from sqlalchemy.dialects.postgresql import JSON
 
 # Define a user model
