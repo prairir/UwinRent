@@ -9,8 +9,8 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:UWinRent-633710@l
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
-from app import models
 from app import routes
+from app import models
 
 if __name__ == '__main__':
     db.create_all()
