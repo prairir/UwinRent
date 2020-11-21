@@ -5,10 +5,10 @@ from flask_migrate import Migrate
 from flask import Flask
 
 app = Flask(__name__)
+cors = CORS(app, resources={r"/graphql": {"origins": "*"}})
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:UWinRent-633710@localhost/UWinRent' # postgresql URI
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
-cors = CORS(app, resources={r"/graphql": {"origins": "*"}})
 
 from app import models
 from app import routes
