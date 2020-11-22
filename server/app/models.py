@@ -1,5 +1,4 @@
 from app import db
-from sqlalchemy.dialects.postgresql import JSON
 
 # Define a user model
 class users(db.Model):
@@ -25,12 +24,14 @@ class properties(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     landlord = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
     location = db.Column(db.String(500), nullable=False)
+    address = db.Column(db.String(500), nullable=False)
     price = db. Column(db.Float, nullable=False)
     description_of = db.relationship('p_descriptions', backref='properties', lazy=True)
 
     def __init__(self, landlord, location, price):
         self.landlord = landlord
         self.location = location
+        self.address = address
         self.price = price
 
     # Used for queries
@@ -46,7 +47,7 @@ class p_descriptions(db.Model):
     whole_house = db.Column(db.Boolean, nullable=False)
     rooms = db.Column(db.Integer, nullable=False)
     furnished = db.Column(db.Boolean, nullable=False)
-    utilities = db.Column(db.Boolean, nullable=False)
+    utilities = db.Column(db.String, nullable=False)
 
     def __init__(self, property_id, pet_friendly, smoke_free, whole_house, rooms, furnished, utilities):
         self.property_id = property_id
