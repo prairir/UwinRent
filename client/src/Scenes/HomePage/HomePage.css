@@ -7,11 +7,12 @@
 }
 
 .Properties {
-    
+    width: 45vw;
+    height: 45vw; 
 }
 
 .Map {
-    width: 40%; 
-    height: 40%; 
+    width: 45vw; 
+    height: 45vw; 
 }
 
