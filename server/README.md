@@ -49,3 +49,15 @@ run `pip freeze > requirements.txt`
 3. Actually run the code
    
    run `gunicorn --bind 127.0.0.1:5000 wsgi:app`
+
+### Migrate
+
+1. cd into `<MAIN>/server`
+
+   run `cd ./server`
+   
+2. run `flask db init`
+
+3. run `flask db migrate`
+
+4. run `flask db upgrade`
