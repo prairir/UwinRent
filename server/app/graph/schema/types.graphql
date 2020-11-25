@@ -47,4 +47,5 @@ type Contact {
 
 type Location {
      address: String!
+     latLong: String!
 }
