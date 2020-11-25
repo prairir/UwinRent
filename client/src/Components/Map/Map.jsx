@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 
+
 // map styling is weird
 // every `<div>` before needs height 100% for it to be variable sized
 // https://stackoverflow.com/questions/16543446/how-to-make-leaflet-map-height-variable
-import './Map.css'
+import './Map.css';
 
 const Map = ({properties}) => {
-
     const markers = properties.map((property) =>
         <Marker key={property.location.latLong.toString()}
           position={property.location.latLong.split(',').map((valStr) => Number(valStr))}>
