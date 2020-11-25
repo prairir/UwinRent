@@ -1,0 +1,20 @@
+.PropertyList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-columns: auto;
+    grid-auto-rows: auto;
+    grid-auto-flow: row;
+    gap: 10px;
+}
+
+.House {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    
+}
+
+.HouseIcon {
+    height: 5vw;
+    width: 5vw;
+}

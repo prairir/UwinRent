@@ -1,20 +1,37 @@
 import React from 'react';
-import { MapContainer, TileLayer } from "react-leaflet";
+import PropTypes from 'prop-types';
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+
 
 // map styling is weird
 // every `<div>` before needs height 100% for it to be variable sized
 // https://stackoverflow.com/questions/16543446/how-to-make-leaflet-map-height-variable
-import './Map.css'
+import './Map.css';
 
-const Map = () => {
+const Map = ({properties}) => {
+    const markers = properties.map((property) =>
+        <Marker key={property.location.latLong.toString()}
+          position={property.location.latLong.split(',').map((valStr) => Number(valStr))}>
+          <Popup>
+            {property.location.address}
+            <br />
+            ${property.price}
+          </Popup>
+        </Marker>
+    );
     return (
         <MapContainer center={[42.306, -83.067]} zoom={15} scrollWheelZoom={true}>
             <TileLayer
                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
+            {markers}
         </MapContainer>
     );
+}
+
+Map.propTypes = {
+    properties: PropTypes.array,
 }
 
 export { Map };

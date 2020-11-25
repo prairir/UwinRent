@@ -5,16 +5,20 @@ import { Map } from '../../Components/Map';
 import { PropertyList } from '../../Components/PropertyList'
 import './HomePage.css'
 
-const querystuff = gql`
-  query {
-    hello {
-      word
+const propertiesQuery = gql`
+{
+  properties {
+    price
+    location{
+      address
+      latLong
     }
   }
+}
 `;
 
 const HomePage = () => {
-  const { loading, error, data } = useQuery(querystuff);
+  const { loading, error, data } = useQuery(propertiesQuery);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :\</p>;
@@ -23,10 +27,10 @@ const HomePage = () => {
   return (
     <div className="HomeContainer">
         <div className="Properties">
-      <PropertyList properties={[data.hello.word, "something"]}/>
+          <PropertyList properties={data.properties}/>
         </div>
         <div className="Map">
-            <Map/>
+    <Map properties={data.properties}/>
         </div>
     </div>
   );
