@@ -1,2 +1,4 @@
 server/venv/*
 __pycache__
+tests/venv/*
+tests/geckodriver.log
