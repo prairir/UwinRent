@@ -17,7 +17,7 @@ To run these tests make sure the you have the server running according to the in
 
 	run `cd ./tests`
 
-* Create venv(optional but reccomeneded for dev)
+* Create venv(optional but recommended for dev)
 
 	* Create venv directory `<MAIN>/server/venv`
 
