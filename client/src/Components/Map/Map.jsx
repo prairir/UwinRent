@@ -10,10 +10,10 @@ import './Map.css';
 
 const Map = ({properties}) => {
     const markers = properties.map((property) =>
-        <Marker key={property.location.latLong.toString()}
-          position={property.location.latLong.split(',').map((valStr) => Number(valStr))}>
+        <Marker key={property.location.toString()}
+          position={property.location.split(',').map((valStr) => Number(valStr))}>
           <Popup>
-            {property.location.address}
+            {property.address}
             <br />
             ${property.price}
           </Popup>

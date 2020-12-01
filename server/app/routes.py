@@ -1,9 +1,9 @@
-from app import app
+from app import app, db
 
 from flask import request, jsonify
 from flask_cors import cross_origin
 
-from ariadne import graphql_sync, make_executable_schema, gql, load_schema_from_path
+from ariadne import load_schema_from_path, make_executable_schema, graphql_sync, snake_case_fallback_resolvers, ObjectType, gql
 from ariadne.constants import PLAYGROUND_HTML
 
 
@@ -12,7 +12,7 @@ from ariadne.constants import PLAYGROUND_HTML
 from app.graph.resolvers import resolvers
 
 type_def = gql(load_schema_from_path("app/graph/schema/"))
-SCHEMA = make_executable_schema(type_def, resolvers)
+SCHEMA = make_executable_schema(type_def, resolvers, snake_case_fallback_resolvers)
 
 # get method means playground
 @app.route('/graphql', methods=['GET'])

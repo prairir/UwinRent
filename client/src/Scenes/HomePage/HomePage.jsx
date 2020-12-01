@@ -9,10 +9,8 @@ const propertiesQuery = gql`
 {
   properties {
     price
-    location{
-      address
-      latLong
-    }
+    location
+    address
   }
 }
 `;
