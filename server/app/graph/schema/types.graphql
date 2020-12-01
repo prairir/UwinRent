@@ -1,51 +1,30 @@
 type Query {
-     hello: Hi!
-     time: Time!
-     properties: [Property!]!
-     renter: Renter!
-     landlord: Landlord!
-}
-
-type Time {
-     current: String!
+	hello: Hi!
+    users: [User]
+    user(userId: ID!): User
+    properties: [Property]
+    property(propId: ID!): Property
 }
 
 type Hi {
-     word: String!
+	word: String!
+}
+
+type User {
+    id: ID
+    name: String!
+    type: String!
+    email: String!
+    passwd: String!
+    phone: Int!
+    property_of: String
 }
 
 type Property {
-	id: ID!
-	location: Location!
-	landlord: Landlord!
-	price: String!
-	description: String
-	petFriendly: Boolean!
-	smokeFree: Boolean!
-	wholeHouse: Boolean!
-	rooms: Int
-	furnished: Boolean!
-	utilities: [String!]!
-}
-
-type Renter {
-	id: ID!
-	contact: Contact!
-}
-
-type Landlord {
-	id: ID!
-	property: [Property!]!
-	contact: Contact!
-}
-
-type Contact {
-	name: String!
-	email: String!
-	phoneNum: String
-}
-
-type Location {
-     address: String!
-     latLong: String!
+    id: ID!
+    landlord: String!
+    location: String!
+    address: String!
+    price: Int!
+    description_of: String
 }

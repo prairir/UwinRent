@@ -6,9 +6,9 @@ import './PropertyList.css'
 
 const PropertyList = ({properties}) => {
     const propertyList = properties.map((property) => 
-        <div className="House" key={property.location.address.toString()}>
+        <div className="House" key={property.address.toString()}>
             <img src={HouseIcon} alt="House Icon" className="HouseIcon" /> <br/>
-            {property.location.address}
+            {property.address}
             <br/>
             ${property.price}
         </div>
