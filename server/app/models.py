@@ -1,6 +1,6 @@
 from app import db
 
-class User(db.Model):
+class UserModel(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(128), nullable=False)
     type = db.Column(db.String(10), nullable=False)
@@ -20,7 +20,7 @@ class User(db.Model):
             "property_of": str(self.property_of)
         }
 
-class Property(db.Model):
+class PropertyModel(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     landlord = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     location = db.Column(db.String(500), nullable=False)
