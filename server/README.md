@@ -7,9 +7,6 @@
 * Flask - Web Server
 * Gunicorn - Reverse Proxy Entry Point
 
-## structure overview
-
-
 ## How to run
 
 ### Requirements
@@ -20,6 +17,10 @@
 #### Update Requirements
 
 run `pip freeze > requirements.txt`
+
+### Install Requirements
+
+run `pip3 install -r requirements.txt`
 
 
 ### Setup
@@ -59,12 +60,12 @@ run `pip freeze > requirements.txt`
    
 2. Initial database
 
-   run flask db init
+   run `flask db init`
 
 3. Migrate database
 
-   run flask db migrate
+   run `flask db migrate`
 
 4. Upgrade database
 
-   run flask db upgrade
+   run `flask db upgrade`
