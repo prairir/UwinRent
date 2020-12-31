@@ -22,4 +22,4 @@ except:
 browser.close()
 
 def test_react():
-    assert True == passed
+    assert passed
