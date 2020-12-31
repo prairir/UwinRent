@@ -41,7 +41,7 @@ run `pip3 install -r requirements.txt`
  
   * activate venv 
     
-    run `source ./venv/bin/activate` 
+    run `. ./venv/bin/activate` 
    
 2. Install the dependencies
 
