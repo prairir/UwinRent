@@ -1,6 +1,6 @@
 from app import db
 
-class UserModel(db.Model):
+class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(128), nullable=False)
     type = db.Column(db.String(10), nullable=False)
@@ -20,13 +20,13 @@ class UserModel(db.Model):
             "property_of": str(self.property_of)
         }
 
-class PropertyModel(db.Model):
+class Property(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     landlord = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     location = db.Column(db.String(500), nullable=False)
     address = db.Column(db.String(500), nullable=False)
-    price = db. Column(db.Float, nullable=False)
-    description_of = db.relationship('p_descriptions', backref='properties', lazy=True)
+    price = db.Column(db.Float, nullable=False)
+    description_of = db.relationship("P_descriptions", backref="properties", lazy=True)
 
     def to_dict(self):
         return {
@@ -38,7 +38,7 @@ class PropertyModel(db.Model):
             "description_of": self.description_of
         }
 
-class p_descriptions(db.Model):
+class P_descriptions(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     property_id = db.Column(db.Integer, db.ForeignKey('property.id'))
     pet_friendly = db.Column(db.Boolean, nullable=False)

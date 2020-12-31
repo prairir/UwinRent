@@ -1,4 +1,4 @@
-from app import app, db
+from app import app, db, schema
 
 from flask import request, jsonify
 from flask_cors import cross_origin
@@ -17,6 +17,8 @@ app.add_url_rule(
     )
 )
 
-@app.route('/')
-def hi():
-    return 'something'
+# test route
+# returns "TEST PASSED" if successfully returned
+@app.route('/test')
+def test():
+    return 'TEST PASSED'
