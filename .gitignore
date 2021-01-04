@@ -1,4 +1,6 @@
 server/venv/*
+server/migrations/*
 __pycache__
 tests/venv/*
 tests/geckodriver.log
+confing.py
