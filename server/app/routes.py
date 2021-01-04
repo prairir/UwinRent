@@ -1,4 +1,5 @@
-from app import app, db, schema
+from app import app, db
+from app.schema import Schema
 
 from flask import request, jsonify
 from flask_cors import cross_origin
@@ -12,7 +13,7 @@ app.add_url_rule(
     '/graphql',
     view_func = GraphQLView.as_view( # graphql playground view function
         'graphql',
-        schema=schema,
+        schema=Schema,
         graphiql=True
     )
 )

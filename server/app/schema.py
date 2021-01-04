@@ -14,11 +14,11 @@ class Query(graphene.ObjectType):
     properties = graphene.List(PropertySchema)
 
     # resolving test
-    def resolve_test(root, info):
+    def resolve_query_test(root, info):
         return f'TEST PASSED'
 
     def resolve_properties(root, info):
         query = PropertySchema.get_query(info)
         return query.all()
 
-schema = graphene.Schema(query=Query)
+Schema = graphene.Schema(query=Query)
