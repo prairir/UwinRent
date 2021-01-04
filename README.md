@@ -1,5 +1,9 @@
 # UwinRent
 
+*The instructions are for unix based OS's*
+
+** Please read the entire README before starting **
+
 ## Requirements
 * <MAIN>/server Requirements
 * <MAIN>/client Requirements

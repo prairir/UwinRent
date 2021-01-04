@@ -2,10 +2,11 @@
 
 *The instructions are for unix based OS's*
 
+** Please read the entire README before starting **
+
 ## Technologies overview
 * React - frontend library to create dynamic sites
 * yarn - JS package and env manager
-
 
 ## How to run
 

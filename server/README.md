@@ -2,6 +2,8 @@
 
 *The instructions are for unix based OS's*
 
+** Please read the entire README before starting **
+
 ## Technologies overview
 * Ariadne - Graphql
 * Flask - Web Server
@@ -22,8 +24,13 @@ run `pip freeze > requirements.txt`
 
 run `pip3 install -r requirements.txt`
 
+### Setup Config File
 
-### Setup
+run `ln -s config_example.py config.py`
+
+each place `<>` sub in the necessary values
+
+### Run
 
 1. cd into `<MAIN>/server`
    
