@@ -1,5 +1,5 @@
 from app import app, db
-from app.schema import Schema
+from app.graph import Schema
 
 from flask import request, jsonify
 from flask_cors import cross_origin

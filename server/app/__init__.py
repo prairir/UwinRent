@@ -26,7 +26,6 @@ db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
 from app import models
-from app import schema
 from app import routes
 
 if __name__ == '__main__':
