@@ -26,7 +26,7 @@ run `pip3 install -r requirements.txt`
 
 ### Setup Config File
 
-run `ln -s config_example.py config.py`
+run `cp config_example.py config.py`
 
 each place `<>` sub in the necessary values
 

@@ -8,7 +8,6 @@ class Config(object):
 # TODO
 class ProductionConfig(Config):
     SQLALCHEMY_DATABASE_URI = "postgresql://<USR>:<PASSWD>@<URL>:<PORT>/<DBNAME>"
-    pass
 
 class DevelopmentConfig(Config):
     DEBUG = True
